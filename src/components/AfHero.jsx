@@ -1,5 +1,5 @@
 import React from "react";
-import Circle from "../assets/circle.png";
+import Circle from "../assets/Circle.png";
 import Cube from "../assets/side shape.png";
 import Button from "./Button";
 import { MoveUpRight } from 'lucide-react';
