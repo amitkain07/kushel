@@ -1,34 +1,34 @@
-import React, { useState } from 'react'
+import React, { useState } from "react";
 
-import { images } from '../assets/assets'
-import { FaChevronLeft, FaChevronRight } from 'react-icons/fa'
-import Button from './Button'
+import { images } from "../assets/assets";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import Button from "./Button";
 
 const caseStudies = [
   {
-    title: '2ndamendmentguns',
-    tag: 'Store Design & Development',
+    title: "2ndamendmentguns",
+    tag: "Store Design & Development",
     stats: [
-      { value: '80%', label: 'Increase in Sales' },
-      { value: '120%', label: 'Conversion Rate' },
-      { value: '140%', label: 'Order Value' },
+      { value: "80%", label: "Increase in Sales" },
+      { value: "120%", label: "Conversion Rate" },
+      { value: "140%", label: "Order Value" },
     ],
     image: images.ecom,
   },
-]
+];
 
 const Ecommerece = () => {
-  const [currentIndex, setCurrentIndex] = useState(0)
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   const prevSlide = () => {
-    setCurrentIndex((prev) => (prev === 0 ? caseStudies.length - 1 : prev - 1))
-  }
+    setCurrentIndex((prev) => (prev === 0 ? caseStudies.length - 1 : prev - 1));
+  };
 
   const nextSlide = () => {
-    setCurrentIndex((prev) => (prev === caseStudies.length - 1 ? 0 : prev + 1))
-  }
+    setCurrentIndex((prev) => (prev === caseStudies.length - 1 ? 0 : prev + 1));
+  };
 
-  const currentCase = caseStudies[currentIndex]
+  const currentCase = caseStudies[currentIndex];
 
   return (
     <section className="min-h-[80vh] py-16 px-4 bg-[#E9F5F6] flex items-center">
@@ -43,13 +43,13 @@ const Ecommerece = () => {
         </div>
 
         <div className="relative flex items-center justify-center">
-          <button
+          {/* <button
             onClick={prevSlide}
             className="absolute left-[-60px] top-1/2 -translate-y-1/2 p-3 bg-white rounded-full shadow-md hover:bg-blue-100 transition"
             aria-label="Previous Slide"
           >
             <FaChevronLeft className="text-blue-600" size={20} />
-          </button>
+          </button> */}
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center px-6 py-10 bg-[#f5f5f5] shadow-xl rounded-lg w-full max-w-7xl">
             <div className="space-y-6">
@@ -65,7 +65,7 @@ const Ecommerece = () => {
                   <div
                     key={i}
                     className={`flex flex-col items-center ${
-                      i < currentCase.stats.length - 1 ? 'border-r-2 pr-6' : ''
+                      i < currentCase.stats.length - 1 ? "border-r-2 pr-6" : ""
                     }`}
                   >
                     <p className="text-blue-700 text-2xl font-bold mb-1">
@@ -89,22 +89,21 @@ const Ecommerece = () => {
             </div>
           </div>
 
-          <button
+          {/* <button
             onClick={nextSlide}
             className="absolute right-[-60px] top-1/2 -translate-y-1/2 p-3 bg-white rounded-full shadow-md hover:bg-blue-100 transition"
             aria-label="Next Slide"
           >
             <FaChevronRight className="text-blue-600" size={20} />
-          </button>
+          </button> */}
         </div>
 
         <div className="justify-center flex mt-10">
-
-          <Button name={"VIEW ALL WORK"}/>
+          <Button name={"VIEW ALL WORK"} />
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Ecommerece
+export default Ecommerece;
