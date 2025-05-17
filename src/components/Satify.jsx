@@ -31,11 +31,11 @@ const SatisfiedClients = () => {
   return (
     <section className="flex flex-col items-center justify-center py-16 px-4 bg-[#041d51]">
       <div className="mb-10">
-        <h1 className="text-3xl md:text-4xl font-bold text-center  mb-4">
+        <h1 className="text-3xl md:text-4xl font-bold text-center text-white  mb-4">
           Hear From Our <span className="text-[#ffcb17]"> Satisfies </span>{' '}
           Clients
         </h1>
-        <p className="text-center  text-lg max-w-3xl ">
+        <p className="text-center text-white text-lg max-w-3xl ">
           We’ve worked with amazing businesses. Here's what they have to say:
         </p>
       </div>

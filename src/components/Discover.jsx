@@ -60,7 +60,7 @@ const Discover = () => {
         {Elements.map((item, index) => (
           <div
             key={index}
-            className="flex flex-col h-full p-6 rounded-lg bg-white border "
+            className="flex flex-col h-full p-6 rounded-lg bg-white  "
           >
             <div className="flex items-center justify-center w-16 h-16 mb-6 text-5xl text-[#0b56e4]">
               {item.icon}
